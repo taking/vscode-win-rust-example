@@ -1,0 +1,51 @@
+{
+    "version": "0.1.0",
+    "command": "node",
+    "showOutput": "silent",
+    "tasks": [
+        {
+            "taskName": "build",
+            "isBuildCommand": true,
+            "args": [
+                ".settings/cargo-shell.js",
+                "build"
+            ],
+            "problemMatcher": {
+                "fileLocation": ["relative", "${cwd}"],
+                "pattern": {
+                    "regexp": "^([^:]*\\.rs):(\\d+):(\\d+): (\\d+):(\\d+) (error|warning|info): (.+?)(?:\\s*\\[([^\\]]+)\\]\\s*)?$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "endLine": 4,
+                    "endColumn": 5,
+                    "severity": 6,
+                    "message": 7,
+                    "code": 8
+                }
+            }
+        },
+        {
+            "taskName": "test",
+            "isTestCommand": true,
+            "args": [
+                ".settings/cargo-shell.js",
+                "run"
+            ],
+            "problemMatcher": {
+                "fileLocation": ["relative", "${cwd}"],
+                "pattern": {
+                    "regexp": "^([^:]*\\.rs):(\\d+):(\\d+): (\\d+):(\\d+) (error|warning|info): (.+?)(?:\\s*\\[([^\\]]+)\\]\\s*)?$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "endLine": 4,
+                    "endColumn": 5,
+                    "severity": 6,
+                    "message": 7,
+                    "code": 8
+                }
+            }
+        }
+    ]
+}

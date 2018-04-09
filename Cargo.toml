@@ -1,0 +1,6 @@
+[package]
+name = "vscode-rust-study"
+version = "0.1.0"
+authors = ["Taking <webmaster@taking.kr>"]
+
+[dependencies]
